@@ -1,31 +1,36 @@
 "use strict";
 const userInput = document.querySelector(".number");
-const userInputValue = userInput.value;
 const button = document.querySelector(".button_js");
 const boxOne = document.querySelector(".box1_js");
-const boxTwo = document.querySelector(".box2_js")
-
-
+const boxTwo = document.querySelector(".box2_js");
 
 function getRandomNumber(max) {
-  const randomNumber = Math.ceil(Math.random() * max);
-  return randomNumber;
+  return Math.ceil(Math.random() * max);
 }
 
-function compareNumber{
-    if (userInputValue < randomNumber) {
-      boxOne.innerHTML = "Demasiado bajo";
-    } else {
-      
-        boxOne.innerHTML = "Demasiado alto";
-    }
+const randomNumber = getRandomNumber(100);
+console.log("El número random", randomNumber);
+
+function compareNumber() {
+  const userInputValue = parseInt(userInput.value);
+  console.log(userInputValue, randomNumber, userInputValue === randomNumber);
+  if (userInputValue < randomNumber) {
+    console.log("demsiado bajo");
+    boxOne.innerHTML = "Demasiado bajo";
+  } else if (userInputValue > randomNumber) {
+    boxOne.innerHTML = "Demasiado alto";
+  } else {
+    console.log("has ganado");
+    boxOne.innerHTML = "has ganado";
+  }
 }
 
-function handleClickTry(){
-    getRandomNumber();
-    compareNumber();
+var contador = 0;
+button.onclick = contador++;
+boxTwo.innerHTML = contador++;
+
+function handleClickTry() {
+  compareNumber();
 }
 
 button.addEventListener("click", handleClickTry);
-
-
