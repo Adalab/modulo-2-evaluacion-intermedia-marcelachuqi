@@ -26,8 +26,10 @@ function compareNumber() {
 }
 
 var contador = 0;
-button.onclick = contador++;
-boxTwo.innerHTML = contador++;
+button.onclick = function () {
+  boxTwo.innerHTML = contador;
+  contador++;
+};
 
 function handleClickTry() {
   compareNumber();
