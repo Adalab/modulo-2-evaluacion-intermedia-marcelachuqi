@@ -30,18 +30,32 @@ body {
 }
 
 .box__1 {
-  background-color: pink;
-  border-radius: 22.5px;
-  font-family: sans-serif;
-  font-size: smaller;
-  color: grey; 
-    margin: 7px;
-  padding: 10px;
+    border: solid 2px 
+    gray;
+
+    width: 100px;
+    height: 20px;
+    font-family: sans-serif;
+    color: grey;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+ align-items: center;
+ text-align: center;
 }
 .box__2 {
-  background-color:  lightpink;
+width: 100px;
+height: 20px;
+  background-color:  grey;
   border-radius: 200px;
   font-family: sans-serif;
   color: aliceblue;
-  padding: 20px;
+  padding: 10px;
+  display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.pista{
+    font-size: 10px;
 }
