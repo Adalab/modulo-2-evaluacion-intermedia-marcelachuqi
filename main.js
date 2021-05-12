@@ -19,13 +19,13 @@ function compareNumber() {
     boxOne.innerHTML = "Demasiado bajo";
   } else if (userInputValue > randomNumber) {
     boxOne.innerHTML = "Demasiado alto";
-  } else {
+  } else if (userInputValue === randomNumber) {
     console.log("has ganado");
     boxOne.innerHTML = "has ganado";
   }
 }
 
-var contador = 0;
+var contador = 1;
 button.onclick = function () {
   boxTwo.innerHTML = contador;
   contador++;
